@@ -51,4 +51,24 @@ El objetivo principal es ofrecer una experiencia de usuario (UX) fluida, con un 
 
 ## 📂 Estructura del Proyecto
 
-El proyecto sigue una estructura profesional y escalable:
+El proyecto sigue la estructura estándar de React con Vite, organizando los componentes y recursos de forma clara:
+
+```text
+├── public/              # Archivos públicos estáticos
+│   ├── cv.pdf           # Currículum vitae descargable
+│   ├── foto.png         # Foto de perfil
+│   └── vite.svg         # Icono del proyecto
+├── src/
+│   ├── assets/          # Recursos estáticos del código (logos, iconos)
+│   ├── components/      # Componentes de la interfaz
+│   │   ├── Contact.jsx  # Sección de contacto
+│   │   ├── Hero.jsx     # Sección principal (Perfil y CV)
+│   │   ├── Projects.jsx # Listado de proyectos
+│   │   └── Skills.jsx   # Listado de habilidades
+│   ├── data.js          # Archivo de datos (Info del perfil, textos, links)
+│   ├── App.css          # Estilos principales de la aplicación
+│   ├── index.css        # Estilos globales y reset
+│   ├── App.jsx          # Componente principal que une las secciones
+│   └── main.jsx         # Punto de entrada de React
+├── index.html           # HTML base
+└── vite.config.js       # Configuración de Vite
