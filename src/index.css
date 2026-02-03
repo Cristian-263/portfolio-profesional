@@ -1,0 +1,268 @@
+/* src/styles/App.css */
+
+/* --- 1. CONFIGURACIÓN BASE Y COLORES --- */
+:root {
+  --bg-main: #0f172a;       /* Fondo oscuro */
+  --card-dark: #1e293b;     /* Fondo tarjetas */
+  --text-white: #f8fafc;    /* Texto blanco */
+  --text-gray: #94a3b8;     /* Texto gris */
+  --accent: #3b82f6;        /* Azul brillante */
+  --highlight: #8b5cf6;     /* Morado */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-white);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.App {
+  max-width: 550px; 
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem 1.5rem;
+}
+
+/* --- 2. SECCIÓN HERO --- */
+.hero-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section h2 {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 1rem 0;
+}
+
+.hero-section p {
+  color: var(--text-gray);
+  font-size: 1rem;
+  margin: 0 auto 1.5rem auto;
+  max-width: 400px;
+}
+
+/* --- 3. BOTONES DE ACCIÓN --- */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Botón del CV (Principal) */
+.btn-cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-radius: 12px;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn-cv:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* --- MEJORA: BOTONES SOCIALES (LinkedIn / GitHub) --- */
+.mini-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Separación entre botones */
+}
+
+.mini-socials a {
+  /* Ahora parecen botones */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ocupan espacio equitativo */
+  padding: 10px 20px;
+  
+  background-color: rgba(30, 41, 59, 0.5); /* Fondo oscuro semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  
+  color: var(--text-gray);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+/* Efecto Hover para Redes */
+.mini-socials a:hover {
+  border-color: var(--text-white);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+/* --- 4. CONTACTO (Debajo del Hero) --- */
+.contact-section {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.glass-footer {
+  background: rgba(30, 41, 59, 0.4); 
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 20px;
+  border-radius: 16px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-gray);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.contact-item .icon {
+  font-style: normal;
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.4));
+}
+
+.contact-item:hover {
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+.separator { color: rgba(255, 255, 255, 0.1); }
+.copyright { display: none; }
+
+/* --- 5. TÍTULOS DE SECCIONES (LIMPIOS) --- */
+.skills-section h2, 
+.projects-section h2 {
+  font-size: 1.4rem;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  
+  /* CAMBIO: Quitamos el borde izquierdo */
+  border-left: none; 
+  padding-left: 0;
+  
+  /* Opcional: Pequeña línea debajo para separar elegante */
+  display: inline-block;
+  border-bottom: 2px solid var(--highlight);
+  padding-bottom: 5px;
+}
+
+/* --- 6. SKILLS --- */
+.skills-section { margin-bottom: 3rem; }
+.skills-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-gray);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: default;
+  transition: border-color 0.2s;
+}
+
+.skill-card:hover {
+  border-color: var(--highlight);
+  color: var(--highlight);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* --- 7. PROYECTOS --- */
+.projects-section { margin-bottom: 2rem; }
+.projects-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.project-card {
+  background-color: var(--card-dark);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--text-white);
+}
+
+.project-card p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1rem; }
+.tag {
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: rgba(59, 130, 246, 0.1);
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.links a {
+  display: inline-block;
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--highlight);
+}
+
+/* --- 8. MÓVIL --- */
+@media (max-width: 600px) {
+  .glass-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .separator { display: none; }
+  .contact-item { font-size: 1rem; width: 100%; }
+}
